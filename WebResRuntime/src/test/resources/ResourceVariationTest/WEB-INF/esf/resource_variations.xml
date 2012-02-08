@@ -1,0 +1,57 @@
+<resource-variation>
+	<variation-definitions>
+		<variation-definition type="pooltype">
+			<variation id="dev" />
+			<variation id="feature" />
+			<variation id="staging" />
+			<variation id="production" />
+		</variation-definition>
+		<variation-definition type="locale">
+			<variation id="en_US" language="en" country="US" />
+			<variation id="de_DE" language="de" country="DE" />
+		</variation-definition>
+		<variation-definition type="browser">
+			<variation id="ie6" version="6" />
+			<variation id="ie7" version="7" />
+			<variation id="ie8" version="8" />
+			<variation id="ie9" version="9" />
+			<variation id="firefox" />
+			<variation id="chrome" />
+			<variation id="safari" />
+		</variation-definition>
+		<variation-definition type="campaign">
+			<variation id="christmas" />
+			<variation id="halloween" />
+			<variation id="black-friday" />
+		</variation-definition>
+	</variation-definitions>
+	<permutation>
+		<variation-ref type="pooltype" id="dev" />
+		<variation-ref type="locale" id="en_US" />
+		<variation-ref type="browser" id="ie7" />
+	</permutation>
+	<resource-mappings>
+		<resource-mapping urn="${res.js.local.jquery_js}">
+			<rule pooltype="dev">${res.js.local.jquery_js}</rule>
+			<rule pooltype="feature">${res.js.local.jquery_min_js}</rule>
+			<rule pooltype="staging">${res.js.local.jquery_min_js}</rule>
+			<rule pooltype="production">${res.js.local.jquery_min_js}</rule>
+		</resource-mapping>
+		<resource-mapping urn="${res.css.local.raptor_css}">
+			<rule browser="ie8">${res.css.local.raptor_css}</rule>
+			<rule>${res.css.local.raptor_datauri_css}</rule>
+		</resource-mapping>
+		<resource-mapping urn="use_multiple_pics_urls">
+			<rule pooltype="feature">false</rule>
+			<rule pooltype="dev">false</rule>
+			<rule pooltype="staging">false</rule>
+			<rule pooltype="production">true</rule>
+		</resource-mapping>
+		<resource-mapping urn="${res.img.local.half.buttons.ebayLogoX_gif}">
+			<rule testenv="env1">${res.img.local.half.buttons.ebayLogo_gif}</rule>
+		</resource-mapping>
+		<resource-mapping urn="${res.img.local.half.buttons.ebayLogoX2_gif}">
+			<rule testenv="env2">${res.img.local.half.buttons.ebayLogo_gif}</rule>
+		</resource-mapping>
+	</resource-mappings>
+</resource-variation>

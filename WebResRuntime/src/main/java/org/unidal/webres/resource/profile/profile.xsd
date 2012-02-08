@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:element name="profile" type="ProfileType"/>
+<xs:complexType name="ProfileType">
+<xs:sequence>
+<xs:element name="common-js-slots">
+<xs:complexType>
+<xs:sequence minOccurs="0" maxOccurs="unbounded">
+<xs:element name="js-slot" type="JsSlotType"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="common-css-slots">
+<xs:complexType>
+<xs:sequence minOccurs="0" maxOccurs="unbounded">
+<xs:element name="css-slot" type="CssSlotType"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="pages">
+<xs:complexType>
+<xs:sequence minOccurs="0" maxOccurs="unbounded">
+<xs:element name="page" type="PageType"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="JsSlotType">
+<xs:sequence>
+<xs:element name="js" type="JsType" minOccurs="0" maxOccurs="1"/>
+</xs:sequence>
+<xs:attribute name="id" type="xs:string" use="required"/>
+<xs:attribute name="override" type="xs:boolean" default="false"/>
+</xs:complexType>
+<xs:complexType name="JsType">
+<xs:attribute name="urn" type="xs:string" use="required"/>
+<xs:attribute name="content" type="xs:string"/>
+</xs:complexType>
+<xs:complexType name="CssSlotType">
+<xs:sequence>
+<xs:element name="css" type="CssType" minOccurs="0" maxOccurs="1"/>
+</xs:sequence>
+<xs:attribute name="id" type="xs:string" use="required"/>
+<xs:attribute name="override" type="xs:boolean" default="false"/>
+</xs:complexType>
+<xs:complexType name="CssType">
+<xs:attribute name="urn" type="xs:string" use="required"/>
+<xs:attribute name="content" type="xs:string"/>
+</xs:complexType>
+<xs:complexType name="PageType">
+<xs:sequence>
+<xs:element name="js-slot" type="JsSlotType" minOccurs="0" maxOccurs="1"/>
+<xs:element name="css-slot" type="CssSlotType" minOccurs="0" maxOccurs="1"/>
+<xs:element name="common-js-slot-ref" type="CommonJsSlotRefType" minOccurs="0" maxOccurs="1"/>
+<xs:element name="common-css-slot-ref" type="CommonCssSlotRefType" minOccurs="0" maxOccurs="1"/>
+<xs:element name="js-slot-group" type="JsSlotGroupType" minOccurs="0" maxOccurs="1"/>
+<xs:element name="css-slot-group" type="CssSlotGroupType" minOccurs="0" maxOccurs="1"/>
+<xs:element name="img-data-uri" type="ImgDataUriType" minOccurs="0" maxOccurs="1"/>
+</xs:sequence>
+<xs:attribute name="id" type="xs:string" use="required"/>
+</xs:complexType>
+<xs:complexType name="CommonJsSlotRefType">
+<xs:attribute name="id" type="xs:string" use="required"/>
+<xs:attribute name="before-slot" type="xs:string"/>
+<xs:attribute name="after-slot" type="xs:string"/>
+</xs:complexType>
+<xs:complexType name="JsSlotGroupType">
+<xs:sequence>
+<xs:element name="js-slot-ref" type="JsSlotRefType" minOccurs="0" maxOccurs="1"/>
+</xs:sequence>
+<xs:attribute name="id" type="xs:string" use="required"/>
+<xs:attribute name="main-slot" type="xs:string" use="required"/>
+</xs:complexType>
+<xs:complexType name="JsSlotRefType">
+<xs:attribute name="id" type="xs:string" use="required"/>
+</xs:complexType>
+<xs:complexType name="CommonCssSlotRefType">
+<xs:attribute name="id" type="xs:string" use="required"/>
+<xs:attribute name="before-slot" type="xs:string"/>
+<xs:attribute name="after-slot" type="xs:string"/>
+</xs:complexType>
+<xs:complexType name="CssSlotGroupType">
+<xs:sequence>
+<xs:element name="css-slot-ref" type="CssSlotRefType" minOccurs="0" maxOccurs="1"/>
+</xs:sequence>
+<xs:attribute name="id" type="xs:string" use="required"/>
+<xs:attribute name="main-slot" type="xs:string" use="required"/>
+</xs:complexType>
+<xs:complexType name="CssSlotRefType">
+<xs:attribute name="id" type="xs:string" use="required"/>
+</xs:complexType>
+<xs:complexType name="ImgDataUriType">
+<xs:attribute name="urn" type="xs:string" use="required"/>
+</xs:complexType>
+</xs:schema>

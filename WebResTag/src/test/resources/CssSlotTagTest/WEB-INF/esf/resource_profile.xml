@@ -1,0 +1,14 @@
+<profile>
+	<common-css-slots>
+		<css-slot id="SYS">
+			<css urn="css.local:/bitbybit/ebaytime.css" />
+			<css urn="css.local:/ebaytime.css" />
+		</css-slot>
+	</common-css-slots>
+	<pages>
+		<page>
+			<css-slot id="HEAD" />
+			<common-css-slot-ref id="SYS" before-slot="HEAD" />
+		</page>
+	</pages>
+</profile>

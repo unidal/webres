@@ -1,0 +1,25 @@
+<root>
+   <common-slots>
+      <slot id="SYS">
+         <resource urn="firstCss"/>
+         <resource urn="thirdCss"/>
+         <resource urn="css.local:/fourthCss"/>
+      </slot>
+      <slot id="search">
+      </slot>
+   </common-slots>
+   <pages>
+      <page id="home">
+         <slot id="HEAD">
+            <resource urn="firstCss"/>
+            <resource urn="css.local:/secondCss"/>
+         </slot>
+         <common-slot-ref id="SYS" before-slot="HEAD"/>
+         <common-slot-ref id="search" after-slot="BODY"/>
+         <slot-group id="group1" main-slot="BODY">
+            <slot-ref id="header"/>
+            <slot-ref id="BODY"/>
+         </slot-group>
+      </page>
+   </pages>
+</root>

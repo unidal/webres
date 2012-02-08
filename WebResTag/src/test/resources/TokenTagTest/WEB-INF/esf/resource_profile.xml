@@ -1,0 +1,14 @@
+<profile>
+	<common-js-slots>
+		<js-slot id="SYS">
+			<js urn="js.local:/bitbybit/ebaytime.js" />
+			<js urn="js.local:/ebaytime.js" />
+		</js-slot>
+	</common-js-slots>
+	<pages>
+		<page>
+			<js-slot id="HEAD" />
+			<common-js-slot-ref id="SYS" before-slot="HEAD" />
+		</page>
+	</pages>
+</profile>
