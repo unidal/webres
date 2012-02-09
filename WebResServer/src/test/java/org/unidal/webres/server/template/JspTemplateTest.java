@@ -117,7 +117,7 @@ public class JspTemplateTest extends ResourceTemplateTestSupport {
       ctx.setPermutation(ResourcePermutation.create(Locale.CHINA));
 
       String template = "Hello, ${res.img.local.eBayLogo_gif} and ${res.img.shared.eBayLogo_gif}!";
-      String expected = "Hello, /test/img/zh_CN/eBayLogo.gif and /test/f/img/shared/eBayLogo.gif!";
+      String expected = "Hello, /test/img/zh_CN/eBayLogo.gif and /test/f/img/shared/zh_CN/eBayLogo.gif!";
 
       checkTemplate(template, expected);
    }
