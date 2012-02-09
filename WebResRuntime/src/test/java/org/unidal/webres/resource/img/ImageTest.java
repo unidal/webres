@@ -20,8 +20,8 @@ public class ImageTest extends ResourceTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.ebay.com/img");
-      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.ebay.com/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.unidal.org/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.unidal.org/img");
    }
 
    @Override
@@ -103,8 +103,8 @@ public class ImageTest extends ResourceTestSupport {
       IImageRef imageRef = ImageFactory.forRef().createSharedRef("/half/ebayLogo.gif");
       IImage image = imageRef.resolve(new ResourceContext(getRegistry()));
 
-      Assert.assertEquals("http://res.ebay.com/img/half/ebayLogo.gif", image.getUrl());
-      Assert.assertEquals("https://res.ebay.com/img/half/ebayLogo.gif", image.getSecureUrl());
+      Assert.assertEquals("http://res.unidal.org/img/half/ebayLogo.gif", image.getUrl());
+      Assert.assertEquals("https://res.unidal.org/img/half/ebayLogo.gif", image.getSecureUrl());
       Assert.assertEquals(110, image.getMeta().getWidth());
       Assert.assertEquals(45, image.getMeta().getHeight());
       Assert.assertEquals(

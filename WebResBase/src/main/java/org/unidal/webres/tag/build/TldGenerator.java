@@ -32,7 +32,7 @@ import org.unidal.webres.tag.core.BaseTagLibDefinition.EsfTagAttributeInfo;
 import org.unidal.webres.tag.meta.TagLibMeta;
 
 public class TldGenerator {
-   private static String OLD_TAGLIB_URI_RESOURCE = "http://www.ebay.com/esf/resource";
+   private static String OLD_TAGLIB_URI_RESOURCE = "http://www.unidal.org/esf/resource";
 
    /**
     * This class is for build3. Build3 plugin will invoke "main" method with

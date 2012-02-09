@@ -25,7 +25,7 @@ public class TemplateLanguageTest {
    @Test
    public void testByContent() {
       Assert.assertEquals(TemplateLanguage.Jsp,
-            TemplateLanguage.getByContent("<%@ taglib prefix='res' uri='http://www.ebay.com/webres'%>", null));
+            TemplateLanguage.getByContent("<%@ taglib prefix='res' uri='http://www.unidal.org/webres'%>", null));
 
       Assert.assertNull(TemplateLanguage.getByExtension("anything else", null));
    }

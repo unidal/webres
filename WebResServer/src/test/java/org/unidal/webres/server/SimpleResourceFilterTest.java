@@ -45,7 +45,7 @@ public class SimpleResourceFilterTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testAjaxDedup() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
                "<res:bean id=\"res\"/>" + //
                "<res:img value='${res.img.shared.eBayLogo_gif}'/>" + //
                "<res:useJs>//here is js</res:useJs>" + //
@@ -90,7 +90,7 @@ public class SimpleResourceFilterTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testCssSlot() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
                "<res:bean id=\"res\"/>" + //
                "<res:cssSlot id='head'/>" + //
                "<res:useCss value='${res.css.local.ebaytime_css}' target='head'/>" + //
@@ -115,7 +115,7 @@ public class SimpleResourceFilterTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testCssSlotInline() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
                "<res:bean id=\"res\"/>" + //
                "<res:cssSlot id='head' renderType='inline'/>" + //
                "<res:useCss value='${res.css.local.ebaytime_css}' target='head'/>" + //
@@ -146,7 +146,7 @@ public class SimpleResourceFilterTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testJsSlot() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
                "<res:bean id=\"res\"/>" + //
                "<res:jsSlot id='head'/>" + //
                "<res:useJs value='${res.js.local.ebaytime_js}' target='head'/>" + //
@@ -171,7 +171,7 @@ public class SimpleResourceFilterTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testJsSlotInline() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
                "<res:bean id=\"res\"/>" + //
                "<res:jsSlot id='head' renderType='inline'/>" + //
                "<res:useJs value='${res.js.local.ebaytime_js}' target='head'/>" + //

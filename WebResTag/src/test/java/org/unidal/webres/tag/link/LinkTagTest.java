@@ -30,7 +30,7 @@ public class LinkTagTest extends ResourceTagTestSupport {
       model.setDynamicAttribute("id", "mylink");
       model.setDynamicAttribute("alt", "My Link");
 
-      checkTag(tag, "<a href=\"http://pages.ebay.com/half/faq.html\" id=\"mylink\" alt=\"My Link\">here</a>");
+      checkTag(tag, "<a href=\"http://pages.unidal.org/half/faq.html\" id=\"mylink\" alt=\"My Link\">here</a>");
    }
 
    @Test
@@ -42,7 +42,7 @@ public class LinkTagTest extends ResourceTagTestSupport {
       model.setValue(faq);
       model.setBodyContent("here");
 
-      checkTag(tag, "<a href=\"http://pages.ebay.com/half/faq.html\">here</a>");
+      checkTag(tag, "<a href=\"http://pages.unidal.org/half/faq.html\">here</a>");
    }
 
    @Test
@@ -54,7 +54,7 @@ public class LinkTagTest extends ResourceTagTestSupport {
       model.setSecure(true);
       model.setBodyContent("here");
 
-      checkTag(tag, "<a href=\"https://pages.ebay.com/half/faq.html\">here</a>");
+      checkTag(tag, "<a href=\"https://pages.unidal.org/half/faq.html\">here</a>");
    }
 
    @Test
@@ -65,6 +65,6 @@ public class LinkTagTest extends ResourceTagTestSupport {
       model.setValue(LinkFactory.forRef().createPagesRef("/half/faq.html"));
       model.setBodyContent("here");
 
-      checkTag(tag, "<a href=\"http://pages.ebay.com/half/faq.html\">here</a>");
+      checkTag(tag, "<a href=\"http://pages.unidal.org/half/faq.html\">here</a>");
    }
 }

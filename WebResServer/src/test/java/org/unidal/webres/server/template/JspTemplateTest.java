@@ -72,7 +72,7 @@ public class JspTemplateTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testWithoutResource() throws Exception {
-      String template = "<%@ taglib prefix='res' uri='http://www.ebay.com/webres' %>" + //
+      String template = "<%@ taglib prefix='res' uri='http://www.unidal.org/webres' %>" + //
             "<res:bean id='res'/>Hello, ${name}! Nice to meet ${you}!";
       String expected = "Hello, world! Nice to meet robert!";
       ITemplateRef ref = TemplateFactory.forRef().createInlineRef("/testWithoutResource.jsp", template);
@@ -87,7 +87,7 @@ public class JspTemplateTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testWithResource() throws Exception {
-      String template = "<%@ taglib prefix='res' uri='http://www.ebay.com/webres' %>" + //
+      String template = "<%@ taglib prefix='res' uri='http://www.unidal.org/webres' %>" + //
             "<res:bean id='res'/>Hello, <res:img value='${res.img.shared.simple_svg}'/>!" + //
             "${res.img.local.eBayLogo_gif} and ${res.img.shared.eBayLogo_gif}!";
       String expected = "Hello, <img src=\"/test/f/img/shared/simple.svg\" width=\"467\" height=\"462\">!" + //

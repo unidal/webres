@@ -1,7 +1,7 @@
 package org.unidal.webres.taglib.basic;
 
 public interface ResourceTagLibConstants {
-   String TAGLIB_URI_RESOURCE = "http://www.ebay.com/webres";
+   String TAGLIB_URI_RESOURCE = "http://www.unidal.org/webres";
 
    String RESOURCE_BEAN_TAG_NAME = "bean";
 

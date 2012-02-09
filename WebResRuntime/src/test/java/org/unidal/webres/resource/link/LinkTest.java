@@ -20,8 +20,8 @@ public class LinkTest extends ResourceTestSupport {
       ILinkRef linkRef = LinkFactory.forRef().createPagesRef("/index.html");
       ILink link = linkRef.resolve(new ResourceContext(getRegistry()));
 
-      Assert.assertEquals("http://pages.ebay.com/index.html", link.getUrl());
-      Assert.assertEquals("https://pages.ebay.com/index.html", link.getSecureUrl());
+      Assert.assertEquals("http://pages.unidal.org/index.html", link.getUrl());
+      Assert.assertEquals("https://pages.unidal.org/index.html", link.getSecureUrl());
    }
 
    @Test
@@ -29,7 +29,7 @@ public class LinkTest extends ResourceTestSupport {
       ILinkRef linkRef = LinkFactory.forRef().createPagesRef("/half/faq.html");
       ILink link = linkRef.resolve(new ResourceContext(getRegistry()));
 
-      Assert.assertEquals("http://pages.ebay.com/half/faq.html", link.getUrl());
-      Assert.assertEquals("https://pages.ebay.com/half/faq.html", link.getSecureUrl());
+      Assert.assertEquals("http://pages.unidal.org/half/faq.html", link.getUrl());
+      Assert.assertEquals("https://pages.unidal.org/half/faq.html", link.getSecureUrl());
    }
 }

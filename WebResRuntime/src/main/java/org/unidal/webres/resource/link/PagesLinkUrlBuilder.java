@@ -8,9 +8,9 @@ import org.unidal.webres.resource.spi.IResourceRegisterable;
 import org.unidal.webres.resource.spi.IResourceUrlBuilder;
 
 public class PagesLinkUrlBuilder implements IResourceUrlBuilder<ILink>, IResourceRegisterable<PagesLinkUrlBuilder> {
-   private String m_urlPrefix = "http://pages.ebay.com";
+   private String m_urlPrefix = "http://pages.unidal.org";
 
-   private String m_secureUrlPrefix = "https://pages.ebay.com";
+   private String m_secureUrlPrefix = "https://pages.unidal.org";
 
    @Override
    public String build(IResourceContext ctx, ILink link) {

@@ -25,8 +25,8 @@ public class SetTagHandlerTest extends ResourceTemplateTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.ebay.com/img");
-      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.ebay.com/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.unidal.org/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.unidal.org/img");
    }
 
    @Override
@@ -36,13 +36,13 @@ public class SetTagHandlerTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testShortcut() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:set id='img' value='${res.img.shared}'/>" + //
             "<res:img value='${img.eBayLogo_gif}'/>" + //
             "<res:img value='${img.half.eBayLogo_gif}'/>";
-      String expected = "<img src=\"http://res.ebay.com/img/eBayLogo.gif\" width=\"110\" height=\"45\">" + //
-            "<img src=\"http://res.ebay.com/img/half/eBayLogo.gif\" width=\"110\" height=\"45\">";
+      String expected = "<img src=\"http://res.unidal.org/img/eBayLogo.gif\" width=\"110\" height=\"45\">" + //
+            "<img src=\"http://res.unidal.org/img/half/eBayLogo.gif\" width=\"110\" height=\"45\">";
 
       checkJspWithSource("testShortcut.jsp", template, expected);
    }

@@ -64,7 +64,7 @@ public class JsonSerializer {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.ebay.webres.services.Serializer#deserialize(String, Class)
+	 * @see org.unidal.webres.services.Serializer#deserialize(String, Class)
 	 */
 	public Object deserialize(final String aContent, final Class<?> aClass)
 			throws SerializationException
@@ -73,7 +73,7 @@ public class JsonSerializer {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.ebay.webres.services.Serializer#serialize(java.lang.Object)
+	 * @see org.unidal.webres.services.Serializer#serialize(java.lang.Object)
 	 */
 	public String serialize(final Object aSource)
 		throws SerializationException, UnsupportedEncodingException
@@ -84,7 +84,7 @@ public class JsonSerializer {
 	}
 	
 	/* (non-Javadoc)
-	 * @see com.ebay.webres.services.Serializer#deserialize(String, Class)
+	 * @see org.unidal.webres.services.Serializer#deserialize(String, Class)
 	 */
 	public Object deserialize(final String aContent, final Class<?> aClass, boolean forceClassHintsInBeanMashalling)
 			throws SerializationException {
@@ -92,7 +92,7 @@ public class JsonSerializer {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.ebay.webres.services.Serializer#serialize(java.lang.Object)
+	 * @see org.unidal.webres.services.Serializer#serialize(java.lang.Object)
 	 */
 	public String serialize(final Object aSource, boolean forceClassHintsInBeanMashalling)
 		throws SerializationException, UnsupportedEncodingException {

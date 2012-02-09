@@ -29,7 +29,7 @@ public class ExpressionPerformanceTest extends SimpleServerSupport {
 //   @Ignore
    public void testEL() throws IOException {
       int num = 100000;
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<% for (int i=0;i<" + num + ";i++) { %>" + //
             "${res.css.local.ebaytime_css}" + //

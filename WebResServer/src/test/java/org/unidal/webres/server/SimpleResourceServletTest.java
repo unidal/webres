@@ -48,7 +48,7 @@ public class SimpleResourceServletTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testAjaxToken() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:img value='${res.img.shared.eBayLogo_gif}'/>" + //
             "<res:useJs>//here is js</res:useJs>" + //
@@ -72,7 +72,7 @@ public class SimpleResourceServletTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testAttributesOverride() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:img value='${res.img.shared.eBayLogo_gif}' _id=\"myimg\"/>" + //
             "<res:useJs _id=\"myjs1\">//here is js</res:useJs>" + //
@@ -107,7 +107,7 @@ public class SimpleResourceServletTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testLink() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:link value=\"${res.link.cmd.signin['&user'][user]['&pwd'][pwd]['%rtm']}\">FAQ</res:link>";
       String expected = "<a href=\"/test/signin?user=guest&pwd=guest#rtm\">FAQ</a>";
@@ -126,7 +126,7 @@ public class SimpleResourceServletTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testJspPage() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:img value='${res.img.shared.eBayLogo_gif}'/>" + //
             "<res:useJs value='${res.js.shared.ebaytime_js}'/>" + //
@@ -151,7 +151,7 @@ public class SimpleResourceServletTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testSharedResourceService() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:img value='${res.img.shared.eBayLogo_gif}'/>" + //
             "<res:useJs id='myjs'>//here is my js</res:useJs>" + //
@@ -173,7 +173,7 @@ public class SimpleResourceServletTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testUrlBuilders() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:img value='${res.img.shared.eBayLogo_gif}'/>" + //
             "<res:useJs>//here is js</res:useJs>" + //

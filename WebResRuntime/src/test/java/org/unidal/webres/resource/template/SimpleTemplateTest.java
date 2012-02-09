@@ -44,8 +44,8 @@ public class SimpleTemplateTest extends ResourceTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.ebay.com/img");
-      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.ebay.com/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.unidal.org/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.unidal.org/img");
 
       getRegistry().register(MockTemplateProviderFactory.INSTANCE);
    }
@@ -61,7 +61,7 @@ public class SimpleTemplateTest extends ResourceTestSupport {
       ITemplateRef ref2 = TemplateFactory.forRef().createJavaRef("/mock/t2");
 
       checkTemplate(ref1, "Hello, world! Nice to meet robert!", "name", "world", "you", "robert");
-      checkTemplate(ref2, "Hello, /test/img/eBayLogo.gif and http://res.ebay.com/img/eBayLogo.gif!");
+      checkTemplate(ref2, "Hello, /test/img/eBayLogo.gif and http://res.unidal.org/img/eBayLogo.gif!");
    }
 
    @Test
@@ -104,7 +104,7 @@ public class SimpleTemplateTest extends ResourceTestSupport {
    @Test
    public void testWithResource() throws Exception {
       String template = "Hello, ${res.img.local.eBayLogo_gif} and ${res.img.shared.eBayLogo_gif}!";
-      String expected = "Hello, /test/img/eBayLogo.gif and http://res.ebay.com/img/eBayLogo.gif!";
+      String expected = "Hello, /test/img/eBayLogo.gif and http://res.unidal.org/img/eBayLogo.gif!";
 
       checkTemplate(template, expected);
    }
@@ -116,7 +116,7 @@ public class SimpleTemplateTest extends ResourceTestSupport {
       ctx.setSecure(true);
 
       String template = "Hello, ${res.img.local.eBayLogo_gif} and ${res.img.shared.eBayLogo_gif}!";
-      String expected = "Hello, /test/img/eBayLogo.gif and https://res.ebay.com/img/eBayLogo.gif!";
+      String expected = "Hello, /test/img/eBayLogo.gif and https://res.unidal.org/img/eBayLogo.gif!";
 
       checkTemplate(template, expected);
    }
@@ -129,7 +129,7 @@ public class SimpleTemplateTest extends ResourceTestSupport {
       ctx.setPermutation(ResourcePermutation.create(Locale.CHINA));
 
       String template = "Hello, ${res.img.local.eBayLogo_gif} and ${res.img.shared.eBayLogo_gif}!";
-      String expected = "Hello, /test/img/zh_CN/eBayLogo.gif and https://res.ebay.com/img/zh_CN/eBayLogo.gif!";
+      String expected = "Hello, /test/img/zh_CN/eBayLogo.gif and https://res.unidal.org/img/zh_CN/eBayLogo.gif!";
 
       checkTemplate(template, expected);
    }

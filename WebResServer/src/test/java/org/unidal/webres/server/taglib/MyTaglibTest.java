@@ -50,7 +50,7 @@ public class MyTaglibTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testCss() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<%@ taglib prefix=\"my\" uri=\"http://www.examples.com/mytaglib\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:cssSlot id='head'/>" + //
@@ -88,7 +88,7 @@ public class MyTaglibTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testJs() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<%@ taglib prefix=\"my\" uri=\"http://www.examples.com/mytaglib\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:jsSlot id='head'/>" + //

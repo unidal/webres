@@ -26,8 +26,8 @@ public class ImageTagHandlerTest extends ResourceTemplateTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.ebay.com/img");
-      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.ebay.com/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.unidal.org/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.unidal.org/img");
    }
 
    @Override
@@ -37,7 +37,7 @@ public class ImageTagHandlerTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testImageWithEL() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:img value='${res.img.local.eBayLogo_gif}'/>" + //
             "<res:img value='${res.img.local.eBayLogo_gif}' secure='true'/>" + //
@@ -47,8 +47,8 @@ public class ImageTagHandlerTest extends ResourceTemplateTestSupport {
             "<res:img value='${res.img.pics.half.btnSearch_gif}' secure='true'/>";
       String expected = "<img src=\"/test/img/eBayLogo.gif\" width=\"110\" height=\"45\">" + //
             "<img src=\"/test/img/eBayLogo.gif\" width=\"110\" height=\"45\">" + //
-            "<img src=\"http://res.ebay.com/img/eBayLogo.gif\" width=\"110\" height=\"45\">" + //
-            "<img src=\"https://res.ebay.com/img/eBayLogo.gif\" width=\"110\" height=\"45\">" + //
+            "<img src=\"http://res.unidal.org/img/eBayLogo.gif\" width=\"110\" height=\"45\">" + //
+            "<img src=\"https://res.unidal.org/img/eBayLogo.gif\" width=\"110\" height=\"45\">" + //
             "<img src=\"http://pics.ebaystatic.com/aw/pics/half/btnSearch.gif\" width=\"72\" height=\"37\">" + //
             "<img src=\"https://pics.ebaystatic.com/aw/pics/half/btnSearch.gif\" width=\"72\" height=\"37\">";
 
@@ -57,7 +57,7 @@ public class ImageTagHandlerTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testImageWithRef() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:img value='${ref}'/>";
       String expected = "<img src=\"/test/img/half/eBayLogo.gif\" width=\"110\" height=\"45\">";
 

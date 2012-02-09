@@ -20,8 +20,8 @@ public class CssTest extends ResourceTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Css.SharedUrlPrefix, "http://res.ebay.com/css");
-      getRegistry().register(String.class, ResourceConstant.Css.SharedSecureUrlPrefix, "https://res.ebay.com/css");
+      getRegistry().register(String.class, ResourceConstant.Css.SharedUrlPrefix, "http://res.unidal.org/css");
+      getRegistry().register(String.class, ResourceConstant.Css.SharedSecureUrlPrefix, "https://res.unidal.org/css");
    }
 
    @Override
@@ -43,7 +43,7 @@ public class CssTest extends ResourceTestSupport {
       ICssRef cssRef = CssFactory.forRef().createSharedRef("/ebaytime.css");
       ICss css = cssRef.resolve(new ResourceContext(getRegistry()));
 
-      Assert.assertEquals("http://res.ebay.com/css/ebaytime.css", css.getUrl());
-      Assert.assertEquals("https://res.ebay.com/css/ebaytime.css", css.getSecureUrl());
+      Assert.assertEquals("http://res.unidal.org/css/ebaytime.css", css.getUrl());
+      Assert.assertEquals("https://res.unidal.org/css/ebaytime.css", css.getSecureUrl());
    }
 }

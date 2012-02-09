@@ -19,8 +19,8 @@ public class UseJsTagTest extends ResourceTagTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Js.SharedUrlPrefix, "http://res.ebay.com/js");
-      getRegistry().register(String.class, ResourceConstant.Js.SharedSecureUrlPrefix, "https://res.ebay.com/js");
+      getRegistry().register(String.class, ResourceConstant.Js.SharedUrlPrefix, "http://res.unidal.org/js");
+      getRegistry().register(String.class, ResourceConstant.Js.SharedSecureUrlPrefix, "https://res.unidal.org/js");
    }
 
    @Override
@@ -118,7 +118,7 @@ public class UseJsTagTest extends ResourceTagTestSupport {
       model.setValue(JsFactory.forRef().createSharedRef("/ebaytime.js"));
       model.setSecure(true);
 
-      checkTag(tag, "<script src=\"https://res.ebay.com/js/ebaytime.js\" type=\"text/javascript\"></script>");
+      checkTag(tag, "<script src=\"https://res.unidal.org/js/ebaytime.js\" type=\"text/javascript\"></script>");
    }
 
    @Test
@@ -128,6 +128,6 @@ public class UseJsTagTest extends ResourceTagTestSupport {
 
       model.setValue(JsFactory.forRef().createSharedRef("/ebaytime.js"));
 
-      checkTag(tag, "<script src=\"http://res.ebay.com/js/ebaytime.js\" type=\"text/javascript\"></script>");
+      checkTag(tag, "<script src=\"http://res.unidal.org/js/ebaytime.js\" type=\"text/javascript\"></script>");
    }
 }

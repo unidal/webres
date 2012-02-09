@@ -4,6 +4,7 @@ import javax.servlet.jsp.JspException;
 
 import org.unidal.webres.resource.api.IJsRef;
 import org.unidal.webres.resource.expression.ZombieExpression;
+import org.unidal.webres.tag.ITagEnv.Scope;
 import org.unidal.webres.tag.js.JsSlotTag;
 import org.unidal.webres.tag.js.JsSlotTagModel;
 import org.unidal.webres.tag.meta.TagAttributeMeta;
@@ -27,7 +28,7 @@ public class JsSlotTagHandler extends BaseResourceTagHandler<IJsRef, JsSlotTagMo
    public int doStartTag() throws JspException {
       int hint = super.doStartTag();
 
-      getTag().getEnv().setPageAttribute("this", new ZombieExpression("this"));
+      getTag().getEnv().setAttribute("this", new ZombieExpression("this"), Scope.REQUEST);
       return hint;
    }
 

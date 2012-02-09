@@ -19,8 +19,8 @@ public class ImageTagTest extends ResourceTagTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.ebay.com/img");
-      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.ebay.com/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedUrlPrefix, "http://res.unidal.org/img");
+      getRegistry().register(String.class, ResourceConstant.Image.SharedSecureUrlPrefix, "https://res.unidal.org/img");
    }
 
    @Override
@@ -120,7 +120,7 @@ public class ImageTagTest extends ResourceTagTestSupport {
       model.setValue(ImageFactory.forRef().createSharedRef("/half/eBayLogo.gif"));
       model.setSecure(true);
 
-      checkTag(tag, "<img src=\"https://res.ebay.com/img/half/eBayLogo.gif\" width=\"110\" height=\"45\">");
+      checkTag(tag, "<img src=\"https://res.unidal.org/img/half/eBayLogo.gif\" width=\"110\" height=\"45\">");
    }
 
    @Test
@@ -130,6 +130,6 @@ public class ImageTagTest extends ResourceTagTestSupport {
 
       model.setValue(ImageFactory.forRef().createSharedRef("/half/eBayLogo.gif"));
 
-      checkTag(tag, "<img src=\"http://res.ebay.com/img/half/eBayLogo.gif\" width=\"110\" height=\"45\">");
+      checkTag(tag, "<img src=\"http://res.unidal.org/img/half/eBayLogo.gif\" width=\"110\" height=\"45\">");
    }
 }

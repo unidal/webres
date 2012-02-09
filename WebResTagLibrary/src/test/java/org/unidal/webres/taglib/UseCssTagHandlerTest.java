@@ -26,8 +26,8 @@ public class UseCssTagHandlerTest extends ResourceTemplateTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Css.SharedUrlPrefix, "http://res.ebay.com/css");
-      getRegistry().register(String.class, ResourceConstant.Css.SharedSecureUrlPrefix, "https://res.ebay.com/css");
+      getRegistry().register(String.class, ResourceConstant.Css.SharedUrlPrefix, "http://res.unidal.org/css");
+      getRegistry().register(String.class, ResourceConstant.Css.SharedSecureUrlPrefix, "https://res.unidal.org/css");
    }
 
    @Override
@@ -37,7 +37,7 @@ public class UseCssTagHandlerTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testUseCssWithEL() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:useCss value='${res.css.local.ebaytime_css}'/>" + //
             "<res:useCss value='${res.css.local.ebaytime_css}' secure='true'/>" + //
@@ -47,8 +47,8 @@ public class UseCssTagHandlerTest extends ResourceTemplateTestSupport {
             "<res:useCss>.here {another: css;}</res:useCss>";
       String expected = "<link href=\"/test/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">" + //
             "<link href=\"/test/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">" + //
-            "<link href=\"http://res.ebay.com/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">" + //
-            "<link href=\"https://res.ebay.com/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">" + //
+            "<link href=\"http://res.unidal.org/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">" + //
+            "<link href=\"https://res.unidal.org/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">" + //
             "<style type=\"text/css\">.here {one: css;}</style>" + //
             "<style type=\"text/css\">.here {another: css;}</style>";
 
@@ -57,7 +57,7 @@ public class UseCssTagHandlerTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testUseCssWithRef() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:useCss value='${ref}'/>";
       String expected = "<link href=\"/test/css/bitbybit/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">";
 

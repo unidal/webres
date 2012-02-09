@@ -20,8 +20,8 @@ public class JsTest extends ResourceTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Js.SharedUrlPrefix, "http://res.ebay.com/js");
-      getRegistry().register(String.class, ResourceConstant.Js.SharedSecureUrlPrefix, "https://res.ebay.com/js");
+      getRegistry().register(String.class, ResourceConstant.Js.SharedUrlPrefix, "http://res.unidal.org/js");
+      getRegistry().register(String.class, ResourceConstant.Js.SharedSecureUrlPrefix, "https://res.unidal.org/js");
 
       getRegistry().register(Boolean.class, ResourceConstant.Js.AggregatedVerbose, true);
    }
@@ -67,8 +67,8 @@ public class JsTest extends ResourceTestSupport {
       IJsRef jsRef = JsFactory.forRef().createSharedRef("/ebaytime.js");
       IJs js = jsRef.resolve(new ResourceContext(getRegistry()));
 
-      Assert.assertEquals("http://res.ebay.com/js/ebaytime.js", js.getUrl());
-      Assert.assertEquals("https://res.ebay.com/js/ebaytime.js", js.getSecureUrl());
+      Assert.assertEquals("http://res.unidal.org/js/ebaytime.js", js.getUrl());
+      Assert.assertEquals("https://res.unidal.org/js/ebaytime.js", js.getSecureUrl());
       Assert.assertEquals(js.getMeta().getLength(), js.getContent().length());
    }
 }

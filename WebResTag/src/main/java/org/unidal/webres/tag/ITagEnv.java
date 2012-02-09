@@ -15,7 +15,7 @@ public interface ITagEnv {
 
    public String getOutput();
 
-   public Object getPageAttribute(String name);
+   public Object getAttribute(String name, Scope scope);
 
    public Object getProperty(String name);
 
@@ -31,7 +31,17 @@ public interface ITagEnv {
 
    public ITagEnv out(Object obj);
 
-   public void setPageAttribute(String name, Object value);
+   public void setAttribute(String name, Object value, Scope scope);
 
    public void setProperty(String name, Object value);
+
+   public static enum Scope {
+      PAGE,
+
+      REQUEST,
+
+      SESSION,
+
+      GLOBAL;
+   }
 }

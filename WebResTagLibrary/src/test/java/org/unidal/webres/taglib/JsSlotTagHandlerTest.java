@@ -25,8 +25,8 @@ public class JsSlotTagHandlerTest extends ResourceTemplateTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Js.SharedUrlPrefix, "http://res.ebay.com/js");
-      getRegistry().register(String.class, ResourceConstant.Js.SharedSecureUrlPrefix, "https://res.ebay.com/js");
+      getRegistry().register(String.class, ResourceConstant.Js.SharedUrlPrefix, "http://res.unidal.org/js");
+      getRegistry().register(String.class, ResourceConstant.Js.SharedSecureUrlPrefix, "https://res.unidal.org/js");
    }
 
    @Override
@@ -36,7 +36,7 @@ public class JsSlotTagHandlerTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testWithDeferRendering() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:jsSlot id='head'/>" + //
             "<res:useJs id='js1' value='${res.js.local.ebaytime_js}' target='head'/>" + //
@@ -67,7 +67,7 @@ public class JsSlotTagHandlerTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testWithoutDeferRendering() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:jsSlot id='head'/>" + //
             "<res:useJs id='js1' value='${res.js.local.ebaytime_js}' target='head'/>" + //
@@ -80,8 +80,8 @@ public class JsSlotTagHandlerTest extends ResourceTemplateTestSupport {
             "<res:jsSlot id='bottom'/>";
       String expected = "<script src=\"/test/js/ebaytime.js\" type=\"text/javascript\"></script>" + //
             "<script src=\"/test/js/bitbybit/ebaytime.js\" type=\"text/javascript\"></script>" + //
-            "<script src=\"http://res.ebay.com/js/ebaytime.js\" type=\"text/javascript\"></script>" + //
-            "<script src=\"http://res.ebay.com/js/bitbybit/BitByBit.js\" type=\"text/javascript\"></script>" + //
+            "<script src=\"http://res.unidal.org/js/ebaytime.js\" type=\"text/javascript\"></script>" + //
+            "<script src=\"http://res.unidal.org/js/bitbybit/BitByBit.js\" type=\"text/javascript\"></script>" + //
             "<script type=\"text/javascript\">//here is one js</script>" + //
             "<script type=\"text/javascript\">//here is another js</script>";
 

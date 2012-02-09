@@ -28,12 +28,12 @@ public class LinkTagHandlerTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testLinkWithEL() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:bean id=\"res\"/>" + //
             "<res:link value='${res.link.pages.half.faq_html}'>FAQ</res:link>" + //
             "<res:link value='${res.link.pages.half.faq_html}' secure='true'>FAQ</res:link>";
-      String expected = "<a href=\"http://pages.ebay.com/half/faq.html\">FAQ</a>" + //
-            "<a href=\"https://pages.ebay.com/half/faq.html\">FAQ</a>";
+      String expected = "<a href=\"http://pages.unidal.org/half/faq.html\">FAQ</a>" + //
+            "<a href=\"https://pages.unidal.org/half/faq.html\">FAQ</a>";
 
       setAttribute("user", "guest");
       setAttribute("pwd", "guest");
@@ -42,9 +42,9 @@ public class LinkTagHandlerTest extends ResourceTemplateTestSupport {
 
    @Test
    public void testLinkWithRef() throws IOException {
-      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.ebay.com/webres\" %>" + //
+      String template = "<%@ taglib prefix=\"res\" uri=\"http://www.unidal.org/webres\" %>" + //
             "<res:link value='${ref}'>FAQ</res:link>";
-      String expected = "<a href=\"http://pages.ebay.com/half/faq.html\">FAQ</a>";
+      String expected = "<a href=\"http://pages.unidal.org/half/faq.html\">FAQ</a>";
 
       setAttribute("ref", LinkFactory.forRef().createPagesRef("/half/faq.html"));
       checkJspWithSource("linkWithRef.jsp", template, expected);

@@ -19,8 +19,8 @@ public class UseCssTagTest extends ResourceTagTestSupport {
    protected void configure() throws Exception {
       super.configure();
 
-      getRegistry().register(String.class, ResourceConstant.Css.SharedUrlPrefix, "http://res.ebay.com/css");
-      getRegistry().register(String.class, ResourceConstant.Css.SharedSecureUrlPrefix, "https://res.ebay.com/css");
+      getRegistry().register(String.class, ResourceConstant.Css.SharedUrlPrefix, "http://res.unidal.org/css");
+      getRegistry().register(String.class, ResourceConstant.Css.SharedSecureUrlPrefix, "https://res.unidal.org/css");
    }
 
    @Override
@@ -118,7 +118,7 @@ public class UseCssTagTest extends ResourceTagTestSupport {
       model.setValue(CssFactory.forRef().createSharedRef("/ebaytime.css"));
       model.setSecure(true);
 
-      checkTag(tag, "<link href=\"https://res.ebay.com/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">");
+      checkTag(tag, "<link href=\"https://res.unidal.org/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">");
    }
 
    @Test
@@ -128,6 +128,6 @@ public class UseCssTagTest extends ResourceTagTestSupport {
 
       model.setValue(CssFactory.forRef().createSharedRef("/ebaytime.css"));
 
-      checkTag(tag, "<link href=\"http://res.ebay.com/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">");
+      checkTag(tag, "<link href=\"http://res.unidal.org/css/ebaytime.css\" type=\"text/css\" rel=\"stylesheet\">");
    }
 }

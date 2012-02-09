@@ -23,7 +23,7 @@ public class CoreTagEnv extends TagEnvSupport {
    }
 
    public Object findAttribute(String name) {
-      return getPageAttribute(name);
+      return getAttribute(name, Scope.PAGE);
    }
 
    public String getContextPath() {
@@ -31,7 +31,7 @@ public class CoreTagEnv extends TagEnvSupport {
    }
 
    @Override
-   public Object getPageAttribute(String name) {
+   public Object getAttribute(String name, Scope scope) {
       return m_map.get(name);
    }
 
@@ -41,7 +41,7 @@ public class CoreTagEnv extends TagEnvSupport {
    }
 
    @Override
-   public void setPageAttribute(String name, Object value) {
+   public void setAttribute(String name, Object value, Scope scope) {
       m_map.put(name, value);
    }
 
