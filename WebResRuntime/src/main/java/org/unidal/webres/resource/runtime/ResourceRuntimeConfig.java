@@ -59,7 +59,7 @@ public class ResourceRuntimeConfig {
 
    ResourceRuntimeConfig(String contextPath, File warRoot) {
       if (warRoot == null) {
-         // no war root, it means there is no local resources
+      	System.out.println("No local resources will be supported due to no warRoot specified!");
       } else if (!warRoot.exists() || !warRoot.isDirectory()) {
          throw new RuntimeException(String.format("Invalid warRoot(%s), it must be an existing folder.", warRoot));
       }

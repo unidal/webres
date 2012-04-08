@@ -27,7 +27,7 @@ public enum MemoryTaskExecutor implements ITaskExecutor<MemoryTaskType> {
    },
 
    WARMUP(MemoryTaskType.WARMUP) {
-      private int m_overhead = 64;
+      private int m_overhead = 48; // win: 64, mac:48
 
       private long startUsedMemory;
 

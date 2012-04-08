@@ -28,7 +28,7 @@ public class InterOperatibility {
       m_runner = new EunitJUnit4Runner(Test1.class);
    }
 
-   @CpuMeta(loops = 100000)
+   @CpuMeta(loops = 100)
    public void test() throws Throwable {
       m_runner.runMethod("test");
    }
@@ -37,6 +37,7 @@ public class InterOperatibility {
       @Test
       public void test() {
          s_index++;
+         System.out.println("test1.test");
       }
    }
 }

@@ -17,11 +17,19 @@ public class Strings {
    public String stringFormat() {
       return String.format("Hello, %s!", m_id);
    }
-
+   
    @CpuMeta(loops = 10000000)
    @MemoryMeta
    public String concatenation() {
       return "Hello, " + m_id + "!";
+   }
+   
+   @CpuMeta(loops = 10000000)
+   @MemoryMeta
+   public String concatenation2() {
+   	String tmp = "Hello, " + m_id;
+   	
+		return tmp + "!";
    }
 
    @CpuMeta(loops = 10000000)

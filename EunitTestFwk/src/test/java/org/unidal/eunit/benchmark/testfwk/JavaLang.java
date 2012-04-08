@@ -35,8 +35,14 @@ public class JavaLang {
 
    @CpuMeta(loops = 10000000)
    @MemoryMeta
+   public String newString() {
+      return new String();
+   }
+   
+   @CpuMeta(loops = 10000000)
+   @MemoryMeta
    public StringBuilder newStringBuilder() {
-      return new StringBuilder();
+   	return new StringBuilder();
    }
 
    @CpuMeta(loops = 100000)

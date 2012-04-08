@@ -42,7 +42,7 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.ebay</groupId>
+			<groupId>org.unidal</groupId>
 			<artifactId>resources</artifactId>
 			<version>1.1.0</version>
 			<scope>test</scope>
@@ -53,7 +53,7 @@
 			<plugin>
 				<groupId>com.site.maven.plugins</groupId>
 				<artifactId>maven-webres-plugin</artifactId>
-				<version>1.0.0</version>
+				<version>1.0.1</version>
 				<executions>
 					<execution>
 						<id>generate .tld files</id>
