@@ -63,12 +63,16 @@ public class JspTagEnv extends TagEnvSupport {
 		switch (scope) {
 		case REQUEST:
 			m_pageContext.getRequest().setAttribute(name, value);
+			break;
 		case SESSION:
 			m_pageContext.getSession().setAttribute(name, value);
+			break;
 		case GLOBAL:
 			m_pageContext.getServletContext().setAttribute(name, value);
+			break;
 		default:
 			m_pageContext.setAttribute(name, value);
+			break;
 		}
 	}
 
