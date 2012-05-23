@@ -16,6 +16,8 @@ public abstract class SimpleServerSupport extends ResourceTemplateTestSupport {
 
       getContext().addServlet(SimpleResourceServlet.class, "/js/*");
       getContext().addServlet(SimpleResourceServlet.class, "/css/*");
+      getContext().addServlet(SimpleResourceServlet.class, "/img/*");
+      getContext().addServlet(SimpleResourceServlet.class, "/images/*");
       getContext().addServlet(SimpleResourceServlet.class, "/f/*");
       getContext().addServlet(SimpleResourceServlet.class, "/z/*");
       getContext().addFilter(SimpleResourceFilter.class, "*.jsp", Handler.ALL);
