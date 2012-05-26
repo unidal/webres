@@ -51,9 +51,9 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>com.site.maven.plugins</groupId>
+				<groupId>org.unidal.maven.plugins</groupId>
 				<artifactId>webres-maven-plugin</artifactId>
-				<version>1.1.0</version>
+				<version>1.1.1</version>
 				<executions>
 					<execution>
 						<id>generate .tld files</id>
