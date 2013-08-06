@@ -57,6 +57,10 @@ public enum ResourceRuntime {
    }
 
    public void removeConfig(String contextPath) {
+		if (contextPath != null && contextPath.length() == 0) {
+			contextPath = null;
+		}
+   	
       synchronized (m_map) {
          m_map.remove(contextPath);
       }

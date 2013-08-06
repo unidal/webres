@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.unidal.webres</groupId>
 	<artifactId>base</artifactId>
-	<version>1.2.0</version>
+	<version>1.2.1</version>
 	<name>Base POM</name>
 	<packaging>pom</packaging>
 	<modules>
@@ -22,37 +22,37 @@
 			<dependency>
 				<groupId>org.unidal.eunit</groupId>
 				<artifactId>EunitTestFwk</artifactId>
-				<version>1.2.0</version>
+				<version>1.2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.unidal.webres</groupId>
 				<artifactId>WebResApi</artifactId>
-				<version>1.2.0</version>
+				<version>1.2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.unidal.webres</groupId>
 				<artifactId>WebResBase</artifactId>
-				<version>1.2.0</version>
+				<version>1.2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.unidal.webres</groupId>
 				<artifactId>WebResRuntime</artifactId>
-				<version>1.2.0</version>
+				<version>1.2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.unidal.webres</groupId>
 				<artifactId>WebResTag</artifactId>
-				<version>1.2.0</version>
+				<version>1.2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.unidal.webres</groupId>
 				<artifactId>WebResTagLibrary</artifactId>
-				<version>1.2.0</version>
+				<version>1.2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.unidal.webres</groupId>
 				<artifactId>WebResServer</artifactId>
-				<version>1.2.0</version>
+				<version>1.2.1</version>
 			</dependency>
 
 			<!-- for AOP -->
@@ -198,7 +198,7 @@ org.eclipse.jdt.core.compiler.compliance=1.6
 	<distributionManagement>
       <repository>
          <id>dianping.repo</id>
-         <url>http://192.168.8.45:8080/artifactory/dianping-releases</url>
+         <url>http://mvn.dianpingoa.com/dianping-releases</url>
       </repository>
 	</distributionManagement>
 	<properties>
