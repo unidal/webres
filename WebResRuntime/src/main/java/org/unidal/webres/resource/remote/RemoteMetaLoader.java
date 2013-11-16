@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.unidal.webres.helper.Splitters;
+import org.unidal.helper.Splitters;
 import org.unidal.webres.resource.api.IResourceMeta;
 import org.unidal.webres.resource.loader.IClassLoader;
 import org.unidal.webres.resource.runtime.ResourceRuntimeContext;

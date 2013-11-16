@@ -3,7 +3,7 @@ package org.unidal.webres.resource.css;
 import java.io.File;
 import java.io.IOException;
 
-import org.unidal.webres.helper.Files;
+import org.unidal.helper.Files;
 import org.unidal.webres.resource.api.ICssMeta;
 import org.unidal.webres.resource.api.ICssRef;
 import org.unidal.webres.resource.api.ResourceException;

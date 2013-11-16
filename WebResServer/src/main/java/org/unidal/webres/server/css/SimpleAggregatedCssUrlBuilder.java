@@ -1,7 +1,7 @@
 package org.unidal.webres.server.css;
 
-import org.unidal.webres.helper.Joiners;
-import org.unidal.webres.helper.Joiners.IBuilder;
+import org.unidal.helper.Joiners;
+import org.unidal.helper.Joiners.IBuilder;
 import org.unidal.webres.resource.ResourceConstant;
 import org.unidal.webres.resource.annotation.ContextPath;
 import org.unidal.webres.resource.api.ICssRef;

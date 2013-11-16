@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.List;
 
-import org.unidal.webres.helper.Splitters;
+import org.unidal.helper.Splitters;
 
 public class ResourceHandlings {
    public static ResourceELEvaluator forEL() {

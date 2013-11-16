@@ -13,18 +13,16 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.w3c.dom.DOMException;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import org.unidal.webres.tag.build.TldGenerator;
 import org.unidal.webres.tag.core.BaseTagLibDefinition;
 import org.unidal.webres.tag.meta.FunctionMeta;
 import org.unidal.webres.tag.meta.TagAttributeMeta;
 import org.unidal.webres.tag.meta.TagLibMeta;
 import org.unidal.webres.tag.meta.TagMeta;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 public class TldGeneratorTest {
 

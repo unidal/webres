@@ -3,7 +3,7 @@ package org.unidal.webres.resource.js;
 import java.io.File;
 import java.io.IOException;
 
-import org.unidal.webres.helper.Files;
+import org.unidal.helper.Files;
 import org.unidal.webres.resource.api.IJsMeta;
 import org.unidal.webres.resource.api.IJsRef;
 import org.unidal.webres.resource.api.ResourceException;

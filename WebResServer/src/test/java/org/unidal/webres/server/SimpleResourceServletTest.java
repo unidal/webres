@@ -10,7 +10,6 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.mortbay.jetty.servlet.Context;
-
 import org.unidal.webres.taglib.support.JettyTestSupport;
 import org.unidal.webres.taglib.support.ResourceTemplateTestSupport;
 

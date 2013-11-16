@@ -5,10 +5,8 @@ import static org.unidal.webres.resource.model.Constants.ENTITY_ROOT;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.xml.sax.SAXException;
-
+import org.unidal.helper.Files;
 import org.unidal.webres.dom.ITagNode;
-import org.unidal.webres.helper.Files;
 import org.unidal.webres.resource.model.entity.Page;
 import org.unidal.webres.resource.model.entity.Resource;
 import org.unidal.webres.resource.model.entity.Root;
@@ -20,6 +18,7 @@ import org.unidal.webres.resource.model.transform.ModelMerger;
 import org.unidal.webres.resource.model.transform.TagNodeBasedMaker;
 import org.unidal.webres.resource.model.transform.TagNodeBasedParser;
 import org.unidal.webres.tag.core.TagXmlParser;
+import org.xml.sax.SAXException;
 
 public class Models {
    public static ImageTypeModel forImage() {

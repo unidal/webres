@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.unidal.webres.helper.Files;
+import org.unidal.helper.Files;
 import org.unidal.webres.json.JsonSerializer;
 import org.unidal.webres.json.SerializationException;
 import org.unidal.webres.resource.api.IResourceMeta;

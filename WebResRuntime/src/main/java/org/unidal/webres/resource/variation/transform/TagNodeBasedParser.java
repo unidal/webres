@@ -4,16 +4,13 @@ import static org.unidal.webres.resource.variation.Constants.ENTITY_PERMUTATION;
 import static org.unidal.webres.resource.variation.Constants.ENTITY_RESOURCE_MAPPINGS;
 import static org.unidal.webres.resource.variation.Constants.ENTITY_RESOURCE_VARIATION;
 import static org.unidal.webres.resource.variation.Constants.ENTITY_RULE;
+import static org.unidal.webres.resource.variation.Constants.ENTITY_VARIATION;
 import static org.unidal.webres.resource.variation.Constants.ENTITY_VARIATION_DEFINITIONS;
 import static org.unidal.webres.resource.variation.Constants.ENTITY_VARIATION_REF;
-import static org.unidal.webres.resource.variation.Constants.ENTITY_VARIATION;
 
 import java.io.IOException;
 
-import org.xml.sax.SAXException;
-
 import org.unidal.webres.dom.ITagNode;
-import org.unidal.webres.tag.core.TagXmlParser;
 import org.unidal.webres.resource.variation.entity.Permutation;
 import org.unidal.webres.resource.variation.entity.ResourceMapping;
 import org.unidal.webres.resource.variation.entity.ResourceVariation;
@@ -21,6 +18,8 @@ import org.unidal.webres.resource.variation.entity.Rule;
 import org.unidal.webres.resource.variation.entity.Variation;
 import org.unidal.webres.resource.variation.entity.VariationDefinition;
 import org.unidal.webres.resource.variation.entity.VariationRef;
+import org.unidal.webres.tag.core.TagXmlParser;
+import org.xml.sax.SAXException;
 
 public class TagNodeBasedParser implements IParser<ITagNode> {
    public ResourceVariation parse(ITagNode node) {

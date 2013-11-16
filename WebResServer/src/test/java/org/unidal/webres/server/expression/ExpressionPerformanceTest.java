@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
 import org.unidal.webres.server.support.SimpleServerSupport;
 import org.unidal.webres.taglib.support.JettyTestSupport;
 

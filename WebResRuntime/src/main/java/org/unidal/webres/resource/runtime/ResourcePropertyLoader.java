@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 
-import org.unidal.webres.helper.Splitters;
+import org.unidal.helper.Splitters;
 import org.unidal.webres.resource.helper.Permutations;
 
 public class ResourcePropertyLoader {

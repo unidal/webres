@@ -2,7 +2,7 @@ package org.unidal.webres.server.link;
 
 import java.util.List;
 
-import org.unidal.webres.helper.Splitters;
+import org.unidal.helper.Splitters;
 import org.unidal.webres.resource.ResourceConstant;
 import org.unidal.webres.resource.ResourceUrn;
 import org.unidal.webres.resource.SystemResourceType;

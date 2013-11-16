@@ -15,7 +15,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
 
-import org.unidal.webres.helper.Files;
+import org.unidal.helper.Files;
 import org.unidal.webres.helper.Scanners;
 import org.unidal.webres.helper.Scanners.FileMatcher;
 import org.unidal.webres.helper.Scanners.IMatcher;

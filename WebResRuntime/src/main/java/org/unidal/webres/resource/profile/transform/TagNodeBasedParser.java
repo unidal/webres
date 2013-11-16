@@ -1,27 +1,24 @@
 package org.unidal.webres.resource.profile.transform;
 
-import static org.unidal.webres.resource.profile.Constants.ENTITY_COMMON_CSS_SLOT_REF;
 import static org.unidal.webres.resource.profile.Constants.ENTITY_COMMON_CSS_SLOTS;
-import static org.unidal.webres.resource.profile.Constants.ENTITY_COMMON_JS_SLOT_REF;
+import static org.unidal.webres.resource.profile.Constants.ENTITY_COMMON_CSS_SLOT_REF;
 import static org.unidal.webres.resource.profile.Constants.ENTITY_COMMON_JS_SLOTS;
+import static org.unidal.webres.resource.profile.Constants.ENTITY_COMMON_JS_SLOT_REF;
+import static org.unidal.webres.resource.profile.Constants.ENTITY_CSS;
+import static org.unidal.webres.resource.profile.Constants.ENTITY_CSS_SLOT;
 import static org.unidal.webres.resource.profile.Constants.ENTITY_CSS_SLOT_GROUP;
 import static org.unidal.webres.resource.profile.Constants.ENTITY_CSS_SLOT_REF;
-import static org.unidal.webres.resource.profile.Constants.ENTITY_CSS_SLOT;
-import static org.unidal.webres.resource.profile.Constants.ENTITY_CSS;
 import static org.unidal.webres.resource.profile.Constants.ENTITY_IMG_DATA_URI;
+import static org.unidal.webres.resource.profile.Constants.ENTITY_JS;
+import static org.unidal.webres.resource.profile.Constants.ENTITY_JS_SLOT;
 import static org.unidal.webres.resource.profile.Constants.ENTITY_JS_SLOT_GROUP;
 import static org.unidal.webres.resource.profile.Constants.ENTITY_JS_SLOT_REF;
-import static org.unidal.webres.resource.profile.Constants.ENTITY_JS_SLOT;
-import static org.unidal.webres.resource.profile.Constants.ENTITY_JS;
 import static org.unidal.webres.resource.profile.Constants.ENTITY_PAGES;
 import static org.unidal.webres.resource.profile.Constants.ENTITY_PROFILE;
 
 import java.io.IOException;
 
-import org.xml.sax.SAXException;
-
 import org.unidal.webres.dom.ITagNode;
-import org.unidal.webres.tag.core.TagXmlParser;
 import org.unidal.webres.resource.profile.entity.CommonCssSlotRef;
 import org.unidal.webres.resource.profile.entity.CommonJsSlotRef;
 import org.unidal.webres.resource.profile.entity.Css;
@@ -35,6 +32,8 @@ import org.unidal.webres.resource.profile.entity.JsSlotGroup;
 import org.unidal.webres.resource.profile.entity.JsSlotRef;
 import org.unidal.webres.resource.profile.entity.Page;
 import org.unidal.webres.resource.profile.entity.Profile;
+import org.unidal.webres.tag.core.TagXmlParser;
+import org.xml.sax.SAXException;
 
 public class TagNodeBasedParser implements IParser<ITagNode> {
    public Profile parse(ITagNode node) {

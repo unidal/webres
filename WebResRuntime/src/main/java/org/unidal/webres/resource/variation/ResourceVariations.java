@@ -5,10 +5,8 @@ import static org.unidal.webres.resource.variation.Constants.ENTITY_RESOURCE_VAR
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.xml.sax.SAXException;
-
+import org.unidal.helper.Files;
 import org.unidal.webres.dom.ITagNode;
-import org.unidal.webres.helper.Files;
 import org.unidal.webres.resource.variation.entity.ResourceVariation;
 import org.unidal.webres.resource.variation.transform.DefaultLinker;
 import org.unidal.webres.resource.variation.transform.DefaultMerger;
@@ -17,6 +15,7 @@ import org.unidal.webres.resource.variation.transform.DefaultXmlBuilder;
 import org.unidal.webres.resource.variation.transform.TagNodeBasedMaker;
 import org.unidal.webres.resource.variation.transform.TagNodeBasedParser;
 import org.unidal.webres.tag.core.TagXmlParser;
+import org.xml.sax.SAXException;
 
 public class ResourceVariations {
    public static ObjectModel forObject() {

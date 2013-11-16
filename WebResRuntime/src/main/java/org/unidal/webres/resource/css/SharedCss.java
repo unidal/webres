@@ -3,7 +3,7 @@ package org.unidal.webres.resource.css;
 import java.net.URL;
 import java.net.URLConnection;
 
-import org.unidal.webres.helper.Files;
+import org.unidal.helper.Files;
 import org.unidal.webres.resource.api.ICssMeta;
 import org.unidal.webres.resource.api.ICssRef;
 import org.unidal.webres.resource.api.ResourceException;

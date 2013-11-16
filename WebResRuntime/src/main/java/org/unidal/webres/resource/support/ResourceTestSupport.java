@@ -2,7 +2,6 @@ package org.unidal.webres.resource.support;
 
 import org.junit.After;
 import org.junit.Before;
-
 import org.unidal.webres.resource.expression.IResourceExpressionEnv;
 import org.unidal.webres.resource.runtime.ResourceConfigurator;
 import org.unidal.webres.resource.runtime.ResourceInitializer;

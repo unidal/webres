@@ -1,6 +1,10 @@
 package org.unidal.webres.logging;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -8,9 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
-
-import org.unidal.webres.logging.ILogger;
-import org.unidal.webres.logging.LoggerFactory;
 
 public class LoggerFactoryTest {
 

@@ -4,7 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 
-import org.unidal.webres.helper.Files;
+import org.unidal.helper.Files;
 import org.unidal.webres.helper.ImageAnalyzer;
 import org.unidal.webres.resource.api.IImageMeta;
 import org.unidal.webres.resource.api.IImageRef;

@@ -11,7 +11,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mortbay.jetty.Handler;
 import org.mortbay.jetty.servlet.Context;
-
 import org.unidal.webres.resource.api.ITemplate;
 import org.unidal.webres.resource.api.ITemplateContext;
 import org.unidal.webres.resource.api.ITemplateRef;

@@ -5,10 +5,8 @@ import static org.unidal.webres.resource.profile.Constants.ENTITY_PROFILE;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.xml.sax.SAXException;
-
+import org.unidal.helper.Files;
 import org.unidal.webres.dom.ITagNode;
-import org.unidal.webres.helper.Files;
 import org.unidal.webres.resource.SystemResourceType;
 import org.unidal.webres.resource.model.entity.Root;
 import org.unidal.webres.resource.profile.entity.Profile;
@@ -21,6 +19,7 @@ import org.unidal.webres.resource.profile.transform.ProfileMerger;
 import org.unidal.webres.resource.profile.transform.TagNodeBasedMaker;
 import org.unidal.webres.resource.profile.transform.TagNodeBasedParser;
 import org.unidal.webres.tag.core.TagXmlParser;
+import org.xml.sax.SAXException;
 
 public class Profiles {
    public static ObjectModel forObject() {

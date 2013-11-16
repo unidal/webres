@@ -8,7 +8,6 @@ import org.unidal.webres.converter.BasicConverterTest;
 import org.unidal.webres.converter.ConstructorConverterTest;
 import org.unidal.webres.converter.ListConverterTest;
 import org.unidal.webres.converter.TypeUtilTest;
-import org.unidal.webres.helper.SplittersTest;
 import org.unidal.webres.logging.LoggerFactoryTest;
 import org.unidal.webres.logging.LoggerTest;
 import org.unidal.webres.tag.core.TagXmlParserTest;
@@ -25,9 +24,6 @@ ArrayConverterTest.class,
 ListConverterTest.class,
 
 ConstructorConverterTest.class,
-
-/* .helper */
-SplittersTest.class,
 
 /* .tag.core */
 TagXmlParserTest.class,

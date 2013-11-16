@@ -11,7 +11,7 @@ import java.util.jar.JarFile;
 import junit.framework.Assert;
 
 import org.junit.Test;
-
+import org.unidal.helper.Files;
 import org.unidal.webres.helper.Scanners.FileMatcher;
 import org.unidal.webres.helper.Scanners.JarMatcher;
 

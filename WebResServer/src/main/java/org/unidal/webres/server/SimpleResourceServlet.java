@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.unidal.webres.helper.Files;
-import org.unidal.webres.helper.Splitters;
+import org.unidal.helper.Files;
+import org.unidal.helper.Splitters;
 import org.unidal.webres.resource.ResourceFactory;
 import org.unidal.webres.resource.ResourceUrn;
 import org.unidal.webres.resource.SystemResourceType;

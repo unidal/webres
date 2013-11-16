@@ -12,6 +12,7 @@ import java.util.jar.JarFile;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+import org.unidal.helper.Files;
 import org.unidal.webres.helper.Scanners.IMatcher.Direction;
 
 public class Scanners {

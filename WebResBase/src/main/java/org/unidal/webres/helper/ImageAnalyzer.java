@@ -8,6 +8,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.unidal.helper.Files;
+
 /**
  * Helper class to process image file to extract its meta data.
  * This class is ported from open source.

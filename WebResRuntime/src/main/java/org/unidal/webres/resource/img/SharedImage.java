@@ -4,7 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
-import org.unidal.webres.helper.Files;
+import org.unidal.helper.Files;
 import org.unidal.webres.helper.ImageAnalyzer;
 import org.unidal.webres.resource.api.IImageMeta;
 import org.unidal.webres.resource.api.IImageRef;

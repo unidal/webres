@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
+import org.unidal.helper.Splitters;
 import org.unidal.webres.helper.Servlets;
-import org.unidal.webres.helper.Splitters;
 import org.unidal.webres.resource.loader.ClassLoaders;
 import org.unidal.webres.resource.loader.IClassLoader;
 import org.unidal.webres.resource.spi.IResourceConfigurator;

@@ -3,7 +3,7 @@ package org.unidal.webres.resource.js;
 import java.net.URL;
 import java.net.URLConnection;
 
-import org.unidal.webres.helper.Files;
+import org.unidal.helper.Files;
 import org.unidal.webres.resource.api.IJsMeta;
 import org.unidal.webres.resource.api.IJsRef;
 import org.unidal.webres.resource.api.ResourceException;

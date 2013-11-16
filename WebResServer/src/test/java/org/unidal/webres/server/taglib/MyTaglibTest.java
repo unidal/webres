@@ -7,7 +7,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mortbay.jetty.Handler;
 import org.mortbay.jetty.servlet.Context;
-
 import org.unidal.webres.server.SimpleResourceConfigurator;
 import org.unidal.webres.server.SimpleResourceFilter;
 import org.unidal.webres.server.SimpleResourceServlet;

@@ -3,7 +3,7 @@ package org.unidal.webres.resource.template;
 import java.io.File;
 import java.io.IOException;
 
-import org.unidal.webres.helper.Files;
+import org.unidal.helper.Files;
 import org.unidal.webres.resource.api.ITemplateMeta;
 import org.unidal.webres.resource.api.ITemplateRef;
 import org.unidal.webres.resource.api.ResourceException;

@@ -1,20 +1,17 @@
 package org.unidal.webres.resource.model.transform;
 
-import static org.unidal.webres.resource.model.Constants.ENTITY_COMMON_SLOT_REF;
 import static org.unidal.webres.resource.model.Constants.ENTITY_COMMON_SLOTS;
+import static org.unidal.webres.resource.model.Constants.ENTITY_COMMON_SLOT_REF;
 import static org.unidal.webres.resource.model.Constants.ENTITY_PAGES;
 import static org.unidal.webres.resource.model.Constants.ENTITY_RESOURCE;
 import static org.unidal.webres.resource.model.Constants.ENTITY_ROOT;
+import static org.unidal.webres.resource.model.Constants.ENTITY_SLOT;
 import static org.unidal.webres.resource.model.Constants.ENTITY_SLOT_GROUP;
 import static org.unidal.webres.resource.model.Constants.ENTITY_SLOT_REF;
-import static org.unidal.webres.resource.model.Constants.ENTITY_SLOT;
 
 import java.io.IOException;
 
-import org.xml.sax.SAXException;
-
 import org.unidal.webres.dom.ITagNode;
-import org.unidal.webres.tag.core.TagXmlParser;
 import org.unidal.webres.resource.model.entity.CommonSlotRef;
 import org.unidal.webres.resource.model.entity.Page;
 import org.unidal.webres.resource.model.entity.Resource;
@@ -22,6 +19,8 @@ import org.unidal.webres.resource.model.entity.Root;
 import org.unidal.webres.resource.model.entity.Slot;
 import org.unidal.webres.resource.model.entity.SlotGroup;
 import org.unidal.webres.resource.model.entity.SlotRef;
+import org.unidal.webres.tag.core.TagXmlParser;
+import org.xml.sax.SAXException;
 
 public class TagNodeBasedParser implements IParser<ITagNode> {
    public Root parse(ITagNode node) {
