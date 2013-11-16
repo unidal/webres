@@ -16,10 +16,9 @@ import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
 
 import org.unidal.helper.Files;
-import org.unidal.webres.helper.Scanners;
-import org.unidal.webres.helper.Scanners.FileMatcher;
-import org.unidal.webres.helper.Scanners.IMatcher;
-import org.unidal.webres.helper.Scanners.JarMatcher;
+import org.unidal.webres.resource.support.Scanners.FileMatcher;
+import org.unidal.webres.resource.support.Scanners.IMatcher;
+import org.unidal.webres.resource.support.Scanners.JarMatcher;
 
 /**
  * Base integration test class in Jetty with Servlet and JSP support. <p>
